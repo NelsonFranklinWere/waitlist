@@ -1,0 +1,15 @@
+# Next.js
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
+
+# Supabase
+SUPABASE_URL=https://your-project.supabase.co
+SUPABASE_SERVICE_ROLE_KEY=your-service-role-key-here
+
+# Resend (Email)
+RESEND_API_KEY=re_xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+RESEND_FROM_EMAIL=OCH <no-reply@yourdomain.com>
+
+# Admin Protection
+ADMIN_TOKEN=your-strong-admin-token-here
+
+
