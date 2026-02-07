@@ -26,8 +26,8 @@ export default function WaitlistForm() {
   }
 
   return (
-    <div className="max-w-md mx-auto">
-      <form action={handleSubmit} className="space-y-4">
+    <div className="max-w-md mx-auto w-full">
+      <form action={handleSubmit} className="space-y-3">
         {/* Honeypot field - hidden from users but visible to bots */}
         <div className="hidden">
           <label htmlFor="website">Website (leave blank)</label>
@@ -43,7 +43,7 @@ export default function WaitlistForm() {
         <div>
           <label
             htmlFor="email"
-            className="block text-sm font-medium text-white mb-1"
+            className="block text-xs sm:text-sm font-medium text-white mb-1"
           >
             Email Address
           </label>
@@ -53,19 +53,19 @@ export default function WaitlistForm() {
             name="email"
             required
             disabled={isPending}
-            className="w-full px-4 py-3 border border-white/30 bg-white/10 text-white rounded-lg focus:ring-2 focus:ring-white focus:border-white disabled:opacity-50 disabled:cursor-not-allowed placeholder:text-white/60"
-            placeholder="your.email@university.edu"
+            className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-white/30 bg-white/10 text-white rounded-lg focus:ring-2 focus:ring-white focus:border-white disabled:opacity-50 disabled:cursor-not-allowed placeholder:text-white/60"
+            placeholder="Enter your email to join waitlist"
           />
         </div>
 
         <button
           type="submit"
           disabled={isPending}
-          className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+          className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center py-2 sm:py-3 text-sm sm:text-base"
         >
           {isPending ? (
             <>
-              <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <svg className="animate-spin -ml-1 mr-3 h-4 w-4 sm:h-5 sm:w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
               </svg>
@@ -79,7 +79,7 @@ export default function WaitlistForm() {
         {/* Status message */}
         {message && (
           <div
-            className={`p-4 rounded-lg ${
+            className={`p-3 sm:p-4 rounded-lg text-sm ${
               messageType === 'success'
                 ? 'bg-green-500/20 border border-green-400 text-green-100'
                 : 'bg-red-500/20 border border-red-400 text-red-100'
