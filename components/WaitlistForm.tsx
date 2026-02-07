@@ -89,10 +89,6 @@ export default function WaitlistForm() {
           </div>
         )}
 
-        {/* Privacy note */}
-        <p className="text-sm text-gray-500 text-center">
-          No spam. Only meaningful updates.
-        </p>
       </form>
     </div>
   )

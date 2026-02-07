@@ -106,26 +106,25 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white">
-        <div className="container-max section-padding">
-          <div className="text-center">
-            <div className="flex items-center justify-center space-x-2 mb-6">
-              <OchLogo size="md" />
-              <span className="font-semibold text-xl">OCH</span>
+      <footer className="bg-och-blue text-white">
+        <div className="container-max py-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Section 1 */}
+            <div className="text-center md:text-left">
+              <h4 className="font-semibold text-lg mb-4">About OCH</h4>
+              <p className="text-blue-100 text-sm">
+                Transforming university students into cybersecurity professionals and leaders through mentorship, hands-on experience, and real community.
+              </p>
             </div>
 
-            <p className="text-xl mb-8">Building Africa&apos;s cybersecurity leaders</p>
-            <p className="text-gray-400 mb-8">Powered by Cres Dynamics</p>
-
-            <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-8">
-              <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                Privacy Policy
-              </a>
-              <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                Contact
-              </a>
-              <a href="#waitlist" className="text-gray-300 hover:text-white transition-colors">
-                Updates
+            {/* Section 2 */}
+            <div className="text-center md:text-right">
+              <h4 className="font-semibold text-lg mb-4">Get Started</h4>
+              <p className="text-blue-100 text-sm mb-4">
+                Join the waitlist to be among the first to access Africa&apos;s premier cybersecurity platform.
+              </p>
+              <a href="#waitlist" className="inline-block bg-white text-och-blue font-semibold px-6 py-2 rounded-lg hover:bg-blue-50 transition-colors text-sm">
+                Join Waitlist
               </a>
             </div>
           </div>
