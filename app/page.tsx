@@ -55,7 +55,6 @@ export default function Home() {
               <CountdownTimer />
             </div>
           </div>
-          </div>
         </div>
       </section>
 
