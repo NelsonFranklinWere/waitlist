@@ -18,38 +18,38 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-br from-och-blue/85 to-blue-950/90"></div>
         </div>
 
-        <div className="container-max flex-1 flex flex-col justify-center relative z-10 py-2 sm:py-4">
-          <div className="text-center max-w-4xl mx-auto px-2 sm:px-4">
+        <div className="container-max flex-1 flex flex-col justify-center relative z-10 py-1 sm:py-2 md:py-4">
+          <div className="text-center max-w-4xl mx-auto px-1 sm:px-2 md:px-4">
             {/* Logo and Title - Compact */}
-            <div className="flex justify-center mb-1 sm:mb-2 md:mb-4">
+            <div className="flex justify-center mb-0.5 sm:mb-1 md:mb-2">
               <OchLogo size="sm" />
             </div>
-            <h1 className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-bold mb-0.5 sm:mb-1 md:mb-2">
+            <h1 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-4xl font-bold mb-0 sm:mb-0.5 md:mb-1">
               Ongozacyberhub (OCH)
             </h1>
-            <p className="text-xs sm:text-sm md:text-lg text-blue-100 mb-2 sm:mb-3 md:mb-6">
+            <p className="text-[10px] sm:text-xs md:text-sm lg:text-lg text-blue-100 mb-1 sm:mb-1.5 md:mb-3">
               Africa&apos;s Cyber Talent Platform
             </p>
 
-            {/* Key Value Props - Very Compact */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-1.5 sm:gap-2 md:gap-3 mb-2 sm:mb-3 md:mb-6 text-xs md:text-sm">
-              <div className="bg-white/10 rounded-lg p-1.5 sm:p-2 md:p-3">
-                <div className="font-semibold mb-0.5 sm:mb-1 text-xs sm:text-sm">🎯 Not a course</div>
-                <div className="text-blue-100 text-xs">A transformation journey</div>
+            {/* Key Value Props - One Row */}
+            <div className="grid grid-cols-3 gap-0.5 sm:gap-1 md:gap-2 mb-1 sm:mb-1.5 md:mb-3">
+              <div className="bg-white/10 rounded p-1 sm:p-1.5 md:p-2">
+                <div className="font-semibold mb-0 text-[10px] sm:text-xs md:text-sm leading-tight">🎯 Not a course</div>
+                <div className="text-blue-100 text-[9px] sm:text-[10px] md:text-xs leading-tight">A transformation journey</div>
               </div>
-              <div className="bg-white/10 rounded-lg p-1.5 sm:p-2 md:p-3">
-                <div className="font-semibold mb-0.5 sm:mb-1 text-xs sm:text-sm">👥 Real community</div>
-                <div className="text-blue-100 text-xs">Learn with peers across Africa</div>
+              <div className="bg-white/10 rounded p-1 sm:p-1.5 md:p-2">
+                <div className="font-semibold mb-0 text-[10px] sm:text-xs md:text-sm leading-tight">👥 Real community</div>
+                <div className="text-blue-100 text-[9px] sm:text-[10px] md:text-xs leading-tight">Learn with peers across Africa</div>
               </div>
-              <div className="bg-white/10 rounded-lg p-1.5 sm:p-2 md:p-3">
-                <div className="font-semibold mb-0.5 sm:mb-1 text-xs sm:text-sm">🚀 Hands-on experience</div>
-                <div className="text-blue-100 text-xs">Build real cyber skills</div>
+              <div className="bg-white/10 rounded p-1 sm:p-1.5 md:p-2">
+                <div className="font-semibold mb-0 text-[10px] sm:text-xs md:text-sm leading-tight">🚀 Hands-on experience</div>
+                <div className="text-blue-100 text-[9px] sm:text-[10px] md:text-xs leading-tight">Build real cyber skills</div>
               </div>
             </div>
 
             {/* Compact Countdown */}
-            <div className="mb-2 sm:mb-3 md:mb-6">
-              <h2 className="text-sm sm:text-base md:text-lg lg:text-xl font-bold mb-1 sm:mb-2 md:mb-4 text-blue-100">
+            <div className="mb-1 sm:mb-1.5 md:mb-3">
+              <h2 className="text-xs sm:text-sm md:text-base lg:text-lg font-bold mb-0.5 sm:mb-1 md:mb-2 text-blue-100">
                 Launching Soon!
               </h2>
               <CountdownTimer />
@@ -59,21 +59,21 @@ export default function Home() {
       </section>
 
       {/* Footer with Waitlist */}
-      <footer id="waitlist" className="bg-blue-950 text-white py-2 sm:py-4 md:py-8">
-        <div className="container-max px-2 sm:px-4">
+      <footer id="waitlist" className="bg-blue-950 text-white py-1 sm:py-2 md:py-4">
+        <div className="container-max px-1 sm:px-2 md:px-4">
           <div className="max-w-md mx-auto text-center">
-            <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold mb-1 sm:mb-2 md:mb-4">
+            <h3 className="text-sm sm:text-base md:text-lg lg:text-xl font-bold mb-0.5 sm:mb-1 md:mb-2">
               Join the OCH Waitlist
             </h3>
-            <p className="text-blue-100 mb-2 sm:mb-3 md:mb-6 text-xs sm:text-sm">
+            <p className="text-blue-100 mb-1 sm:mb-1.5 md:mb-3 text-[10px] sm:text-xs md:text-sm">
               Be the first to know when we launch. Get early access to Africa&apos;s premier cybersecurity platform.
             </p>
 
-            <div className="bg-white/10 rounded-lg p-2 sm:p-3 md:p-4 mb-2 sm:mb-3 md:mb-6">
-              <div className="text-left text-xs text-blue-100 mb-1 sm:mb-2 md:mb-3">
+            <div className="bg-white/10 rounded-lg p-1.5 sm:p-2 md:p-3 mb-1 sm:mb-1.5 md:mb-3">
+              <div className="text-left text-[10px] sm:text-xs text-blue-100 mb-0.5 sm:mb-1 md:mb-1.5">
                 <strong>What you&apos;ll get:</strong>
               </div>
-              <ul className="text-left text-xs sm:text-sm text-blue-50 space-y-0.5 sm:space-y-1">
+              <ul className="text-left text-[9px] sm:text-[10px] md:text-xs text-blue-50 space-y-0 sm:space-y-0.5">
                 <li>• Early platform access</li>
                 <li>• Exclusive launch updates</li>
                 <li>• Priority Nairobi pilot invites</li>
