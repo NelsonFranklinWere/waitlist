@@ -59,39 +59,39 @@ export default function CountdownTimer() {
 
   return (
     <div className="text-center">
-      <div className="grid grid-cols-4 gap-2 max-w-xs mx-auto">
-        <div className="bg-white/20 backdrop-blur-sm rounded-lg p-2 md:p-3">
-          <div className="text-xl md:text-2xl font-bold text-white">
+      <div className="grid grid-cols-4 gap-1 sm:gap-2 max-w-xs mx-auto">
+        <div className="bg-white/20 backdrop-blur-sm rounded-lg p-1 sm:p-2 md:p-3">
+          <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white">
             {timeLeft.days.toString().padStart(2, '0')}
           </div>
-          <div className="text-xs text-blue-100 uppercase tracking-wide">
+          <div className="text-[10px] sm:text-xs text-blue-100 uppercase tracking-wide">
             Days
           </div>
         </div>
 
-        <div className="bg-white/20 backdrop-blur-sm rounded-lg p-2 md:p-3">
-          <div className="text-xl md:text-2xl font-bold text-white">
+        <div className="bg-white/20 backdrop-blur-sm rounded-lg p-1 sm:p-2 md:p-3">
+          <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white">
             {timeLeft.hours.toString().padStart(2, '0')}
           </div>
-          <div className="text-xs text-blue-100 uppercase tracking-wide">
+          <div className="text-[10px] sm:text-xs text-blue-100 uppercase tracking-wide">
             Hours
           </div>
         </div>
 
-        <div className="bg-white/20 backdrop-blur-sm rounded-lg p-2 md:p-3">
-          <div className="text-xl md:text-2xl font-bold text-white">
+        <div className="bg-white/20 backdrop-blur-sm rounded-lg p-1 sm:p-2 md:p-3">
+          <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white">
             {timeLeft.minutes.toString().padStart(2, '0')}
           </div>
-          <div className="text-xs text-blue-100 uppercase tracking-wide">
+          <div className="text-[10px] sm:text-xs text-blue-100 uppercase tracking-wide">
             Min
           </div>
         </div>
 
-        <div className="bg-white/20 backdrop-blur-sm rounded-lg p-2 md:p-3">
-          <div className="text-xl md:text-2xl font-bold text-white">
+        <div className="bg-white/20 backdrop-blur-sm rounded-lg p-1 sm:p-2 md:p-3">
+          <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white">
             {timeLeft.seconds.toString().padStart(2, '0')}
           </div>
-          <div className="text-xs text-blue-100 uppercase tracking-wide">
+          <div className="text-[10px] sm:text-xs text-blue-100 uppercase tracking-wide">
             Sec
           </div>
         </div>
