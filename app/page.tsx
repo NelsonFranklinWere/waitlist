@@ -18,7 +18,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-br from-och-blue/85 to-blue-950/90"></div>
         </div>
 
-        <div className="container-max relative z-10 py-[40px] sm:py-[68px] md:py-[72px] lg:py-[104px] w-full">
+        <div className="container-max relative z-10 py-[120px] sm:py-[204px] md:py-[216px] lg:py-[312px] w-full">
           <div className="text-center max-w-4xl mx-auto px-[calc(0.5rem+4px)] sm:px-[calc(1rem+4px)] md:px-[calc(1.5rem+4px)] lg:px-[calc(2rem+4px)] w-full">
             {/* Logo and Title - Compact */}
             <div className="flex justify-center mb-1 sm:mb-1.5 md:mb-2 px-[4px]">
