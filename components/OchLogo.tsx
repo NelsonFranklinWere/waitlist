@@ -8,7 +8,7 @@ interface OchLogoProps {
 }
 
 export default function OchLogo({
-  src,
+  src = '/OCH Side Profila Blue Logo.png',
   alt = 'OCH Logo',
   className = '',
   size = 'md'
@@ -19,25 +19,14 @@ export default function OchLogo({
     lg: 'h-16 w-16'
   }
 
-  if (src) {
-    return (
-      <Image
-        src={src}
-        alt={alt}
-        width={size === 'sm' ? 32 : size === 'md' ? 48 : 64}
-        height={size === 'sm' ? 32 : size === 'md' ? 48 : 64}
-        className={`${sizeClasses[size]} ${className}`}
-      />
-    )
-  }
-
-  // Fallback text logo
   return (
-    <div className={`flex items-center justify-center bg-och-blue text-white font-bold rounded-lg ${sizeClasses[size]} ${className}`}>
-      <span className={`text-${size === 'sm' ? 'sm' : size === 'md' ? 'lg' : 'xl'}`}>
-        OCH
-      </span>
-    </div>
+    <Image
+      src={src}
+      alt={alt}
+      width={size === 'sm' ? 32 : size === 'md' ? 48 : 64}
+      height={size === 'sm' ? 32 : size === 'md' ? 48 : 64}
+      className={`${sizeClasses[size]} ${className} object-contain`}
+    />
   )
 }
 

@@ -6,8 +6,19 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Compact Hero with Countdown */}
-      <section className="min-h-screen bg-gradient-to-br from-och-blue to-blue-900 text-white flex flex-col">
-        <div className="container-max flex-1 flex flex-col justify-center">
+      <section className="min-h-screen relative text-white flex flex-col">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src="/ochviewimage.png"
+            alt="OCH Background View"
+            className="w-full h-full object-cover"
+          />
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-och-blue/90 to-blue-900/90"></div>
+        </div>
+
+        <div className="container-max flex-1 flex flex-col justify-center relative z-10">
           <div className="text-center max-w-4xl mx-auto px-4">
             {/* Logo and Title - Compact */}
             <div className="flex justify-center mb-4">
@@ -57,7 +68,7 @@ export default function Home() {
         </div>
 
         {/* Fixed bottom CTA for mobile */}
-        <div className="md:hidden bg-white/20 backdrop-blur-sm border-t border-white/20 p-4">
+        <div className="md:hidden bg-white/20 backdrop-blur-sm border-t border-white/20 p-4 relative z-10">
           <div className="text-center">
             <a href="#waitlist" className="inline-block w-full bg-white text-och-blue font-semibold px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors">
               Join the OCH Waitlist
