@@ -10,24 +10,30 @@ interface TimeLeft {
 }
 
 export default function CountdownTimer() {
-  // Set target date to 23 days, 20 hours, 30 minutes, 3 seconds from now
-  const targetDate = new Date()
-  targetDate.setDate(targetDate.getDate() + 23)
-  targetDate.setHours(targetDate.getHours() + 20)
-  targetDate.setMinutes(targetDate.getMinutes() + 30)
-  targetDate.setSeconds(targetDate.getSeconds() + 3)
+  // Calculate target date: 23 days, 20 hours, 30 minutes, 1 second from now
+  const calculateTargetDate = () => {
+    const target = new Date()
+    target.setDate(target.getDate() + 23)
+    target.setHours(target.getHours() + 20)
+    target.setMinutes(target.getMinutes() + 30)
+    target.setSeconds(target.getSeconds() + 1)
+    target.setMilliseconds(0)
+    return target.getTime()
+  }
 
+  const [targetTime] = useState(() => calculateTargetDate())
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({
     days: 23,
     hours: 20,
     minutes: 30,
-    seconds: 3
+    seconds: 1
   })
 
   useEffect(() => {
-    const timer = setInterval(() => {
+    // Calculate initial time left
+    const updateTime = () => {
       const now = new Date().getTime()
-      const distance = targetDate.getTime() - now
+      const distance = targetTime - now
 
       if (distance > 0) {
         const days = Math.floor(distance / (1000 * 60 * 60 * 24))
@@ -37,13 +43,19 @@ export default function CountdownTimer() {
 
         setTimeLeft({ days, hours, minutes, seconds })
       } else {
-        // Timer expired, reset to original values
-        setTimeLeft({ days: 23, hours: 20, minutes: 30, seconds: 3 })
+        // Timer expired - show zeros
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 })
       }
-    }, 1000)
+    }
+
+    // Update immediately
+    updateTime()
+
+    // Then update every second
+    const timer = setInterval(updateTime, 1000)
 
     return () => clearInterval(timer)
-  }, [targetDate])
+  }, [targetTime])
 
   return (
     <div className="text-center">
