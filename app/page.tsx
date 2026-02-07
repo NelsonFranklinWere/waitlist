@@ -6,16 +6,16 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Compact Hero with Countdown */}
-      <section className="min-h-screen relative text-white flex flex-col">
-        {/* Background Image */}
+      <section className="min-h-screen relative text-white flex flex-col bg-blue-950">
+        {/* Background Image with Dark Overlay */}
         <div className="absolute inset-0">
           <img
             src="/ochviewimage.png"
             alt="OCH Background View"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover opacity-10"
           />
-          {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-br from-och-blue/90 to-blue-900/90"></div>
+          {/* Dark Navy Blue Overlay */}
+          <div className="absolute inset-0 bg-blue-950"></div>
         </div>
 
         <div className="container-max flex-1 flex flex-col justify-center relative z-10 py-4">
@@ -59,7 +59,7 @@ export default function Home() {
       </section>
 
       {/* Footer with Waitlist */}
-      <footer id="waitlist" className="bg-blue-900 text-white py-4 sm:py-8">
+      <footer id="waitlist" className="bg-blue-950 text-white py-4 sm:py-8">
         <div className="container-max px-2 sm:px-4">
           <div className="max-w-md mx-auto text-center">
             <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-4">
