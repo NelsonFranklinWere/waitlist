@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Compact Hero with Countdown */}
-      <section className="min-h-screen relative text-white flex flex-col bg-blue-950">
+      <section className="relative text-white flex flex-col bg-blue-950">
         {/* Background Image with Dark Overlay */}
         <div className="absolute inset-0">
           <img
@@ -18,7 +18,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-br from-och-blue/85 to-blue-950/90"></div>
         </div>
 
-        <div className="container-max flex-1 flex flex-col justify-center relative z-10 py-1 sm:py-2 md:py-4">
+        <div className="container-max relative z-10 py-1 sm:py-2 md:py-4">
           <div className="text-center max-w-4xl mx-auto px-1 sm:px-2 md:px-4">
             {/* Logo and Title - Compact */}
             <div className="flex justify-center mb-0.5 sm:mb-1 md:mb-2">
@@ -48,7 +48,7 @@ export default function Home() {
             </div>
 
             {/* Compact Countdown */}
-            <div className="mb-1 sm:mb-1.5 md:mb-3">
+            <div className="mb-0">
               <h2 className="text-xs sm:text-sm md:text-base lg:text-lg font-bold mb-0.5 sm:mb-1 md:mb-2 text-blue-100">
                 Launching Soon!
               </h2>
