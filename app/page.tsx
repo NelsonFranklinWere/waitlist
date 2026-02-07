@@ -18,8 +18,8 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-br from-och-blue/85 to-blue-950/90"></div>
         </div>
 
-        <div className="container-max relative z-10 py-1 sm:py-2 md:py-4 w-full">
-          <div className="text-center max-w-4xl mx-auto px-1 sm:px-2 md:px-4 w-full">
+        <div className="container-max relative z-10 py-4 sm:py-6 md:py-8 lg:py-12 w-full">
+          <div className="text-center max-w-4xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8 w-full">
             {/* Logo and Title - Compact */}
             <div className="flex justify-center mb-1 sm:mb-1.5 md:mb-2">
               <OchLogo size="sm" />
@@ -59,8 +59,8 @@ export default function Home() {
       </section>
 
       {/* Footer with Waitlist */}
-      <footer id="waitlist" className="bg-blue-950 text-white py-1 sm:py-2 md:py-4 w-full">
-        <div className="container-max px-1 sm:px-2 md:px-4 w-full">
+      <footer id="waitlist" className="bg-blue-950 text-white py-4 sm:py-6 md:py-8 lg:py-12 w-full">
+        <div className="container-max px-2 sm:px-4 md:px-6 lg:px-8 w-full">
           <div className="max-w-md mx-auto text-center w-full">
             <h3 className="text-sm sm:text-base md:text-lg lg:text-xl font-bold mb-1 sm:mb-1.5 md:mb-2">
               Join the OCH Waitlist
