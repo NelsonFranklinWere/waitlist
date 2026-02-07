@@ -77,22 +77,22 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Compact Waitlist Section */}
-      <section id="waitlist" className="py-8 bg-white">
+      {/* Footer with Waitlist */}
+      <footer id="waitlist" className="bg-blue-900 text-white py-12">
         <div className="container-max">
           <div className="max-w-md mx-auto text-center">
-            <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
+            <h3 className="text-xl md:text-2xl font-bold mb-4">
               Join the OCH Waitlist
             </h3>
-            <p className="text-gray-600 mb-6 text-sm">
+            <p className="text-blue-100 mb-6 text-sm">
               Be the first to know when we launch. Get early access to Africa&apos;s premier cybersecurity platform.
             </p>
 
-            <div className="bg-gray-50 rounded-lg p-4 mb-6">
-              <div className="text-left text-xs text-gray-600 mb-3">
+            <div className="bg-white/10 rounded-lg p-4 mb-6">
+              <div className="text-left text-xs text-blue-100 mb-3">
                 <strong>What you&apos;ll get:</strong>
               </div>
-              <ul className="text-left text-sm text-gray-700 space-y-1">
+              <ul className="text-left text-sm text-blue-50 space-y-1">
                 <li>• Early platform access</li>
                 <li>• Exclusive launch updates</li>
                 <li>• Priority Nairobi pilot invites</li>
@@ -101,32 +101,6 @@ export default function Home() {
             </div>
 
             <WaitlistForm />
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-och-blue text-white">
-        <div className="container-max py-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Section 1 */}
-            <div className="text-center md:text-left">
-              <h4 className="font-semibold text-lg mb-4">About OCH</h4>
-              <p className="text-blue-100 text-sm">
-                Transforming university students into cybersecurity professionals and leaders through mentorship, hands-on experience, and real community.
-              </p>
-            </div>
-
-            {/* Section 2 */}
-            <div className="text-center md:text-right">
-              <h4 className="font-semibold text-lg mb-4">Get Started</h4>
-              <p className="text-blue-100 text-sm mb-4">
-                Join the waitlist to be among the first to access Africa&apos;s premier cybersecurity platform.
-              </p>
-              <a href="#waitlist" className="inline-block bg-white text-och-blue font-semibold px-6 py-2 rounded-lg hover:bg-blue-50 transition-colors text-sm">
-                Join Waitlist
-              </a>
-            </div>
           </div>
         </div>
       </footer>

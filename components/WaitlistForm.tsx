@@ -43,7 +43,7 @@ export default function WaitlistForm() {
         <div>
           <label
             htmlFor="email"
-            className="block text-sm font-medium text-gray-700 mb-1"
+            className="block text-sm font-medium text-white mb-1"
           >
             Email Address
           </label>
@@ -53,7 +53,7 @@ export default function WaitlistForm() {
             name="email"
             required
             disabled={isPending}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-och-blue focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full px-4 py-3 border border-white/30 bg-white/10 text-white rounded-lg focus:ring-2 focus:ring-white focus:border-white disabled:opacity-50 disabled:cursor-not-allowed placeholder:text-white/60"
             placeholder="your.email@university.edu"
           />
         </div>
@@ -81,8 +81,8 @@ export default function WaitlistForm() {
           <div
             className={`p-4 rounded-lg ${
               messageType === 'success'
-                ? 'bg-green-50 border border-green-200 text-green-800'
-                : 'bg-red-50 border border-red-200 text-red-800'
+                ? 'bg-green-500/20 border border-green-400 text-green-100'
+                : 'bg-red-500/20 border border-red-400 text-red-100'
             }`}
           >
             {message}
