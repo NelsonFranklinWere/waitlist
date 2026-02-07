@@ -27,7 +27,7 @@ export default function WaitlistForm() {
 
   return (
     <div className="max-w-md mx-auto w-full">
-      <form action={handleSubmit} className="space-y-1 sm:space-y-1.5 md:space-y-2">
+      <form action={handleSubmit} className="space-y-2 sm:space-y-2.5 md:space-y-3">
         {/* Honeypot field - hidden from users but visible to bots */}
         <div className="hidden">
           <label htmlFor="website">Website (leave blank)</label>
@@ -43,7 +43,7 @@ export default function WaitlistForm() {
         <div>
           <label
             htmlFor="email"
-            className="block text-[10px] sm:text-xs md:text-sm font-medium text-white mb-0 sm:mb-0.5"
+            className="block text-[10px] sm:text-xs md:text-sm font-medium text-white mb-1 sm:mb-1.5"
           >
             Email Address
           </label>
