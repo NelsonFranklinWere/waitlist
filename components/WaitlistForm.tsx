@@ -54,7 +54,7 @@ export default function WaitlistForm() {
             required
             disabled={isPending}
             className="cyber-input w-full px-3 sm:px-4 py-2 sm:py-3 text-xs sm:text-sm lg:text-base font-mono text-cyber-white placeholder-cyber-white-dim disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
-            placeholder="Enter your email to get notified."
+            placeholder="Enter your-email.com/.edu get notified"
           />
         </div>
 
