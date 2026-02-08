@@ -48,6 +48,11 @@ export default function Home() {
                   &gt; Africa&apos;s Cyber Talent Platform
                 </p>
 
+                {/* Tagline */}
+                <p className="text-xs sm:text-sm md:text-base text-cyber-white-dim font-mono mt-2 sm:mt-3">
+                  To produce mission-ready cyber leaders through real-world simulation, skill mastery, and measurable impact.
+                </p>
+
                 {/* Value Props - Compact Grid */}
                 <div className="grid grid-cols-3 gap-2 sm:gap-3 mt-6">
                   <div className="bg-cyber-dark-2/80 border border-cyber-navy/50 rounded-lg p-2 sm:p-3 backdrop-blur-sm">
