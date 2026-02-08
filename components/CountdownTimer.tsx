@@ -58,40 +58,40 @@ export default function CountdownTimer() {
   }, [targetTime])
 
   return (
-    <div className="text-center">
-      <div className="grid grid-cols-4 gap-1 sm:gap-2 max-w-xs mx-auto">
-        <div className="bg-white/20 backdrop-blur-sm rounded-lg p-1 sm:p-2 md:p-3">
-          <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white">
+    <div className="text-center lg:text-left">
+      <div className="grid grid-cols-4 gap-2 sm:gap-3 max-w-sm">
+        <div className="bg-cyber-dark-2/80 border-2 border-cyber-navy/60 rounded-lg p-2 sm:p-3 backdrop-blur-sm" style={{ boxShadow: '0 0 15px rgba(30, 58, 138, 0.3)' }}>
+          <div className="text-xl sm:text-2xl md:text-3xl font-bold text-cyber-navy-light font-mono cyber-glow">
             {timeLeft.days.toString().padStart(2, '0')}
           </div>
-          <div className="text-[10px] sm:text-xs text-blue-100 uppercase tracking-wide">
+          <div className="text-[10px] sm:text-xs text-cyber-white-dim font-mono uppercase tracking-wide mt-1">
             Days
           </div>
         </div>
 
-        <div className="bg-white/20 backdrop-blur-sm rounded-lg p-1 sm:p-2 md:p-3">
-          <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white">
+        <div className="bg-cyber-dark-2/80 border-2 border-cyber-navy/60 rounded-lg p-2 sm:p-3 backdrop-blur-sm" style={{ boxShadow: '0 0 15px rgba(30, 58, 138, 0.3)' }}>
+          <div className="text-xl sm:text-2xl md:text-3xl font-bold text-cyber-navy-light font-mono cyber-glow">
             {timeLeft.hours.toString().padStart(2, '0')}
           </div>
-          <div className="text-[10px] sm:text-xs text-blue-100 uppercase tracking-wide">
+          <div className="text-[10px] sm:text-xs text-cyber-white-dim font-mono uppercase tracking-wide mt-1">
             Hours
           </div>
         </div>
 
-        <div className="bg-white/20 backdrop-blur-sm rounded-lg p-1 sm:p-2 md:p-3">
-          <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white">
+        <div className="bg-cyber-dark-2/80 border-2 border-cyber-navy/60 rounded-lg p-2 sm:p-3 backdrop-blur-sm" style={{ boxShadow: '0 0 15px rgba(30, 58, 138, 0.3)' }}>
+          <div className="text-xl sm:text-2xl md:text-3xl font-bold text-cyber-navy-light font-mono cyber-glow">
             {timeLeft.minutes.toString().padStart(2, '0')}
           </div>
-          <div className="text-[10px] sm:text-xs text-blue-100 uppercase tracking-wide">
+          <div className="text-[10px] sm:text-xs text-cyber-white-dim font-mono uppercase tracking-wide mt-1">
             Min
           </div>
         </div>
 
-        <div className="bg-white/20 backdrop-blur-sm rounded-lg p-1 sm:p-2 md:p-3">
-          <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white">
+        <div className="bg-cyber-dark-2/80 border-2 border-cyber-navy/60 rounded-lg p-2 sm:p-3 backdrop-blur-sm" style={{ boxShadow: '0 0 15px rgba(30, 58, 138, 0.3)' }}>
+          <div className="text-xl sm:text-2xl md:text-3xl font-bold text-cyber-navy-light font-mono cyber-glow">
             {timeLeft.seconds.toString().padStart(2, '0')}
           </div>
-          <div className="text-[10px] sm:text-xs text-blue-100 uppercase tracking-wide">
+          <div className="text-[10px] sm:text-xs text-cyber-white-dim font-mono uppercase tracking-wide mt-1">
             Sec
           </div>
         </div>

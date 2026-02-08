@@ -26,8 +26,8 @@ export default function WaitlistForm() {
   }
 
   return (
-    <div className="max-w-md mx-auto w-full">
-      <form action={handleSubmit} className="space-y-2 sm:space-y-2.5 md:space-y-3">
+    <div className="w-full">
+      <form action={handleSubmit} className="space-y-3 sm:space-y-4">
         {/* Honeypot field - hidden from users but visible to bots */}
         <div className="hidden">
           <label htmlFor="website">Website (leave blank)</label>
@@ -43,9 +43,9 @@ export default function WaitlistForm() {
         <div>
           <label
             htmlFor="email"
-            className="block text-[10px] sm:text-xs md:text-sm font-medium text-white mb-1 sm:mb-1.5"
+            className="block text-xs sm:text-sm font-mono font-medium text-cyber-navy-light mb-2 cyber-glow"
           >
-            Email Address
+            &gt; Email Address
           </label>
           <input
             type="email"
@@ -53,39 +53,40 @@ export default function WaitlistForm() {
             name="email"
             required
             disabled={isPending}
-            className="w-full px-1.5 sm:px-2 md:px-3 lg:px-4 py-1 sm:py-1.5 md:py-2 lg:py-3 text-[10px] sm:text-xs md:text-sm lg:text-base border border-white/30 bg-white/10 text-white rounded-lg focus:ring-2 focus:ring-white focus:border-white disabled:opacity-50 disabled:cursor-not-allowed placeholder:text-white/60"
-            placeholder="Enter your email to join waitlist"
+            className="cyber-input w-full px-3 sm:px-4 py-2 sm:py-3 text-xs sm:text-sm lg:text-base font-mono text-cyber-white placeholder-cyber-white-dim disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
+            placeholder="enter your email to get notified."
           />
         </div>
 
         <button
           type="submit"
           disabled={isPending}
-          className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center py-1 sm:py-1.5 md:py-2 lg:py-3 text-[10px] sm:text-xs md:text-sm lg:text-base"
+          className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center py-2 sm:py-3 text-xs sm:text-sm lg:text-base font-mono font-bold"
         >
           {isPending ? (
             <>
-              <svg className="animate-spin -ml-1 mr-1 sm:mr-2 h-2.5 w-2.5 sm:h-3 sm:w-3 md:h-4 md:w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <svg className="animate-spin -ml-1 mr-2 h-4 w-4 sm:h-5 sm:w-5 text-cyber-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
               </svg>
-              Joining Waitlist...
+              <span className="terminal-cursor">Processing...</span>
             </>
           ) : (
-            'Join the Waitlist'
+            <span className="terminal-cursor">&gt; Join Waitlist</span>
           )}
         </button>
 
         {/* Status message */}
         {message && (
           <div
-            className={`p-1.5 sm:p-2 md:p-3 rounded-lg text-[10px] sm:text-xs md:text-sm ${
+            className={`p-3 rounded-lg text-xs sm:text-sm font-mono border-2 ${
               messageType === 'success'
-                ? 'bg-green-500/20 border border-green-400 text-green-100'
-                : 'bg-red-500/20 border border-red-400 text-red-100'
+                ? 'bg-cyber-navy/20 border-cyber-navy-light text-cyber-navy-light cyber-glow'
+                : 'bg-red-500/10 border-red-500 text-red-400'
             }`}
+            style={messageType === 'success' ? { boxShadow: '0 0 20px rgba(59, 130, 246, 0.3)' } : {}}
           >
-            {message}
+            <span className="font-bold">&gt;</span> {message}
           </div>
         )}
 
