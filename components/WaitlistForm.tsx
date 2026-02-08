@@ -27,7 +27,7 @@ export default function WaitlistForm() {
 
   return (
     <div className="w-full">
-      <form action={handleSubmit} className="space-y-3 sm:space-y-4">
+      <form action={handleSubmit} className="space-y-2 sm:space-y-3">
         {/* Honeypot field - hidden from users but visible to bots */}
         <div className="hidden">
           <label htmlFor="website">Website (leave blank)</label>
@@ -43,7 +43,7 @@ export default function WaitlistForm() {
         <div>
           <label
             htmlFor="email"
-            className="block text-xs sm:text-sm font-mono font-medium text-cyber-navy-light mb-2 cyber-glow"
+            className="block text-[10px] sm:text-xs font-mono font-medium text-cyber-navy-light mb-1.5 cyber-glow"
           >
             &gt; Email Address
           </label>
@@ -53,15 +53,15 @@ export default function WaitlistForm() {
             name="email"
             required
             disabled={isPending}
-            className="cyber-input w-full px-3 sm:px-4 py-2 sm:py-3 text-xs sm:text-sm lg:text-base font-mono text-cyber-white placeholder-cyber-white-dim disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
-            placeholder="Enter your-email.com/.edu get notified"
+            className="cyber-input w-full px-2.5 sm:px-3 py-2 sm:py-2.5 text-xs sm:text-sm font-mono text-cyber-white placeholder-cyber-white-dim disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
+            placeholder="Enter your-@example.com, get notified"
           />
         </div>
 
         <button
           type="submit"
           disabled={isPending}
-          className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center py-2 sm:py-3 text-xs sm:text-sm lg:text-base font-mono font-bold"
+          className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center py-2 sm:py-2.5 text-xs sm:text-sm font-mono font-bold"
         >
           {isPending ? (
             <>
