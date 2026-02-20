@@ -9,31 +9,21 @@ interface TimeLeft {
   seconds: number
 }
 
-export default function CountdownTimer() {
-  // Calculate target date: 23 days, 20 hours, 30 minutes, 1 second from now
-  const calculateTargetDate = () => {
-    const target = new Date()
-    target.setDate(target.getDate() + 23)
-    target.setHours(target.getHours() + 20)
-    target.setMinutes(target.getMinutes() + 30)
-    target.setSeconds(target.getSeconds() + 1)
-    target.setMilliseconds(0)
-    return target.getTime()
-  }
+// Fixed target date so countdown is consistent: 14 days from Feb 20, 2026 → March 6, 2026
+const TARGET_DATE = new Date('2026-03-06T00:00:00').getTime()
 
-  const [targetTime] = useState(() => calculateTargetDate())
+export default function CountdownTimer() {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({
-    days: 23,
-    hours: 20,
-    minutes: 30,
-    seconds: 1
+    days: 14,
+    hours: 0,
+    minutes: 0,
+    seconds: 0
   })
 
   useEffect(() => {
-    // Calculate initial time left
     const updateTime = () => {
-      const now = new Date().getTime()
-      const distance = targetTime - now
+      const now = Date.now()
+      const distance = TARGET_DATE - now
 
       if (distance > 0) {
         const days = Math.floor(distance / (1000 * 60 * 60 * 24))
@@ -43,19 +33,14 @@ export default function CountdownTimer() {
 
         setTimeLeft({ days, hours, minutes, seconds })
       } else {
-        // Timer expired - show zeros
         setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 })
       }
     }
 
-    // Update immediately
     updateTime()
-
-    // Then update every second
     const timer = setInterval(updateTime, 1000)
-
     return () => clearInterval(timer)
-  }, [targetTime])
+  }, [])
 
   return (
     <div className="text-center lg:text-left">
